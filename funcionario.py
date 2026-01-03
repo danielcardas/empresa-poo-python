@@ -5,6 +5,7 @@ class Funcionario:
     def __init__(self, nome: str, salario_base: float) -> None:
         self.nome = nome
         self.salario_base = salario_base
+        self.criar_funcionario()
 
     def calcular_salario(self):
         ...
