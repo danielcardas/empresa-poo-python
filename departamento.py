@@ -22,4 +22,7 @@ class Departamento:
         print(f'Total do Departamento: R${self.total_folha():.2f}')
 
     def total_folha(self):
-        pass
+        valor_total = 0
+        for i in self.funcionarios:
+            valor_total += i.calcular_salario()
+        return valor_total
