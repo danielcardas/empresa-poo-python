@@ -1,24 +1,15 @@
-from funcionario import Funcionario
-
-
 class Empresa:
-    def __init__(self, nome: str, funcionarios: list | None = None) -> None:
+    def __init__(self, nome: str, departamentos: list | None = None) -> None:
         self.nome = nome
-        self.funcionarios = funcionarios or []
+        self.departamentos = departamentos or []
+    
+    def adicionar_departamento(self, departamento):
+        self.departamentos.append(departamento)
+        print(f'O Departamento {departamento} foi criado!')
 
-    def adicionar_funcionario(self, funcionario: Funcionario):
-        self.funcionarios.append(funcionario)
-        print(f'{funcionario.nome} registrado!')
-
-    def folha_pagamento(self):
-        print('-- Folha de Pagamentos --')
-        for i in self.funcionarios:
-            # Chamei apenas i em funcionário pois defini no repr de Funcionario
-            print(f'Funcionario: {i} | '
-                  f'Salário: R${i.calcular_salario():.2f}')
-
-    def total_folha(self):
+    def folha_geral(self):
         valor_total = 0
-        for i in self.funcionarios:
-            valor_total += i.calcular_salario()
-        return valor_total
+        for departamento in self.departamentos:
+            departamento.folha_pagamento()
+            valor_total += departamento.total_folha()
+        print(f'== Total geral da empresa: R${valor_total:.2f}')
