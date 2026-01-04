@@ -14,7 +14,7 @@ class Funcionario:
         return f'{self.nome} ({self.__class__.__name__})'
     
     def criar_funcionario(self):
-        with open('funcionarios.json', 'w') as arquivo:
+        with open('funcionarios.json', 'a') as arquivo:
             json.dump(self.to_dict(), arquivo)
 
     def to_dict(self):
@@ -42,4 +42,3 @@ class Estagiario(Funcionario):
 
 if __name__ == '__main__':
     func1 = Desenvolvedor('Daniel', 2000)
-    func1.criar_funcionario()
