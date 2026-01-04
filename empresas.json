@@ -1,0 +1,30 @@
+{
+    "nome": "Betasoft",
+    "departamentos": [
+        {
+            "nome": "Desenvolvedor",
+            "funcionarios": [
+                {
+                    "nome": "Daniel",
+                    "salario_base": 2000,
+                    "cargo": "Desenvolvedor"
+                },
+                {
+                    "nome": "Cleber",
+                    "salario_base": 8000,
+                    "cargo": "Gerente"
+                }
+            ]
+        },
+        {
+            "nome": "Administração",
+            "funcionarios": [
+                {
+                    "nome": "João",
+                    "salario_base": 1600,
+                    "cargo": "Estagiario"
+                }
+            ]
+        }
+    ]
+}

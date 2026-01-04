@@ -19,3 +19,4 @@ if __name__ == '__main__':
     empresa1.adicionar_departamento(administracao)
 
     empresa1.folha_geral()
+    empresa1.salvar_json()
